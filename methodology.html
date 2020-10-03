@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./source/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="company-logo">
+                    <img  class="logo" src="./img/logo.jpg" alt="logo">
+                    <div class="tagline-container">
+                        <div class="company-name" style="font-size: 24px;">ELite Coders</div>
+                    <div class="tagline" style="font-size: 12px;">NASA Space Apps</div>
+                    </div>
+                    
+
+            </div>
+                            
+                     <div class="navbar" >
+                     <ul>
+                           
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="methodology.html">methodology</a></li>
+                        <li><a href="code.html">code</a></li>
+                        <li><a href="result.html">result</a></li>
+                        <li><a href="team.html">team</a></li>
+                     </ul>
+                  </div>
+                    <div class="toggle" >
+                        <span class="toggle-line line-1"></span>
+                        <span class="toggle-line line-2"></span>
+                        <span class="toggle-line line-3"></span>
+                    </div>     
+                    <div class="log-container" >
+                        <button class="sign-up" onclick="show()">Sign in</button>
+                       <!--- <button class="login">Login</button>-->
+                    </div>
+ 
+                <div style="clear:right;"></div>
+            </div>
+    </div>
+    
+    
+    <div class="sign-up-form">
+        <div>
+            <div class="sf">
+                <span style="font-size: 19px;width:fit-content;text-align:center;padding-top:5px;padding-bottom:5px;display:block;border-bottom:3px solid green;color:rgb(14,12,10);">Sign In Form</span>
+
+            </div>
+            <button class="sign-up-close" id="close">x</button>
+        </div>
+        
+        <form action="#">
+             
+            <label for="uname">Username</label>
+            <input type="text" placeholder="User Name" required="true" id="uname" >
+            <label for="uemail">Email Address</label>
+            <input type="email" id="uemail" placeholder="Email Address" required="true">
+            <label for="pwd1">Password</label>
+            <input type="password" id="pwd1" placeholder="Password">
+
+            <label for="pwd2">Confirm Password</label>
+            <input type="password" id="pwd2" placeholder="Confirm Password">
+
+            <input type="submit" value="Sign up">
+
+        </form>
+    </div>
+
+    <div class="methodology">
+        <div class="methodology-container">
+        <h2 class="title">methodology</h2>
+            <p>
+                The input image is given to system in order to discriminate the status of sky from the input cloud image. In existing system wavelets was taken into account to differentiate between the sky and cloud. Now the features are extracted from the image to represent the sky status. After that the feature extracted images of sky status is processed with cloud screening algorithm and we progress with the feature extracted image to represent the status of cloud
+
+            </p>
+
+<h2 class="sub-title">Input Data</h2>
+<p>
+    The input data are the digital cloud images. File system are used to store the images. The dimension of image would be normal or say 400x300. The images would be loaded either from the site which in regular interval upload images or taken with minimum 10 megapixel camera with good clarity. Images taken in different atmosphere help in study better result and derive fruitful approximation of system’s efficiency.
+
+</p>
+<h2 class="sub-title">Sky Status</h2>
+<p>
+    The second phase is discriminate cloud and sky, i.e. sky status. In previous year research sky status is found using the wavelets and law’s texture description. But we use contourlet or pca algorithm for finding the sky status. As pca algorithm and contourlet theory provides that feature extraction by these techniques provides better result..
+
+</p>
+<div><img src="./img/method.jpg" alt=""></div>
+<h2 class="sub-title">Cloud Status</h2>
+<p>
+    The progressively we obtain the status of cloud. The cloud varies according to the thickness and brightness. Threshold and high density is detected. The density with the middle level is considering the sky. In mild time or moody time sky is considered as cloud. To find the mask the histogram equalization is used the value with the highest weight will be considered as sky and the others will be considered as cloud. Also the cloud mask algorithm is used here. The formula to find the cloud status is given as follows. 
+Cloud Status = Total No. of Segment – Sky Status. <br>
+The major task here is to find the type of cloud as per the cloud status each and every cloud will be having its own shape and density and the values are matched accordingly. 
+
+</p>
+
+<h2 class="title">Rainfall status and cloud information</h2>
+<p>The rainfall is estimate from the type of cloud. Cumulonimbus and nimbostratus are the rainfall clouds. So we take the color and shape and also the width and find the rainfall status the temperature is also taken into account. Cloud information gives the theoretical proof of cloud that is altitude, height, appearance and classification are given
+</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">
+            <div> <img src="./img/logo.jpg" alt="logo">  
+
+            </div> 
+            <div>
+                <span style="font-size:23px;">Elite Coders</span>
+                <span style="font-size:10px;">NASA Space Apps</span>
+            </div>
+        
+        </div>
+        <div class=".footer-info">
+            Email id : srihari.cs19@bitsathy.ac.in / kishorekumar.it19@bitsathy.ac.in
+        </div>
+        <div class=".footer-info">
+        contact no : +91 8056341244 / +91 9025537359
+        </div>
+
+    </div>
+    <script src="./source/file.js"></script>
+    </body> 
+    </html>
