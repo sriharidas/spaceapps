@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Elite Coders | code</title>
     <link rel="stylesheet" href="./source/css/style.css">
 </head>
 <body>
@@ -36,10 +36,10 @@
                         <span class="toggle-line line-2"></span>
                         <span class="toggle-line line-3"></span>
                     </div>     
-                    <div class="log-container" >
+                    <!--- <div class="log-container" >
                         <button class="sign-up" onclick="show()">Sign in</button>
-                       <!--- <button class="login">Login</button>-->
-                    </div>
+                       <button class="login">Login</button>
+                    </div>-->
  
                 <div style="clear:right;"></div>
             </div>
@@ -75,13 +75,131 @@
         <div class="code-layout">
             <h2>Code Description</h2>
         <div class="code-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum explicabo pariatur qui velit facilis suscipit iure nesciunt maiores provident, doloribus magnam hic modi cumque asperiores culpa laudantium, illum mollitia.
-        </div>
-        <h2>Code</h2>
-        <div class="code-container">
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam unde blanditiis maiores quam nihil dignissimos voluptate molestias minus eligendi commodi laborum voluptatum, a magni illo neque accusamus. Quas, omnis sunt!</div>
+            Here we have predicited Rainfall statistics in our country (India) based on the dataset which contains data of rainfall in each states. we used some of the libraries in python like pandas , numpy , matplotlib , sklearn,seaborn,etc. for preprocessing the data from dataset , performing mathematical and numerical calculations on the preprocessed data and plotted graphs among various data. we have predicited the states with more amount of rainfall.
+            <br> The dataset used in our rainfall predicition is  <a href="https://github.com/sriharidas/dataset.git">dataset</a>. It contains the annual rainfall data in each states from January to December.
             
         </div>
+        
+        <!----
+        <div class="code-container">
+            <div style="white-space:pre-wrap;line-height:1.5;">
+                import pandas as pd
+                import numpy as np
+                from sklearn import linear_model
+                import matplotlib.pyplot as plt
+                import seaborn as sns
+                from subprocess import check_output
+                df = pd.read_csv(r'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit)\chanflood.csv')
+                df.info()
+                df.dropna(how='any', inplace=True)
+                subdivs = df['SUBDIVISION'].unique()
+                num_of_subdivs = subdivs.size
+                print('Total # of Subdivs: ' + str(num_of_subdivs))
+                subdivs
+
+                df.groupby('SUBDIVISION').mean().sort_values(by='ANNUAL', ascending=False)['ANNUAL'].plot('bar', color='Y',width=0.9,title='Subdivision wise Average Annual Rainfall', fontsize=20)
+                plt.xticks(rotation = 90)   			  
+                plt.xticks(np.linspace(0,35,36,endpoint=True))                                                 
+                plt.xticks(fontsize="small")
+                plt.ylabel('Average Annual Rainfall (mm)')
+                #fig = plt.figure(figsize=(8,8))
+                #ax = fig.add_subplot(222)
+                ax.title.set_fontsize(5)
+                ax.xaxis.label.set_fontsize(5)
+                ax.yaxis.label.set_fontsize(5)
+                print(df.groupby('SUBDIVISION').mean().sort_values(by='ANNUAL', ascending=False)['ANNUAL'][[0,1,1]])
+                print(df.groupby('SUBDIVISION').mean().sort_values(by='ANNUAL', ascending=False)['ANNUAL'][[33,34,35]])
+                plt.show()
+                <br>
+                import matplotlib.pyplot as plt
+                import pandas as pd
+                import numpy as np
+                import seaborn as sns
+                from subprocess import check_output
+                df = pd.read_csv(r'C:\Users\User_2\Downloads\chanflood.csv')
+                months = df.columns[2:14]
+                fig = plt.figure(figsize=(18,10))
+                ax = fig.add_subplot(221)
+                df.groupby('YEAR').mean()[months].plot.line(title='Overall Rainfall in Each Month of Year', ax=ax,fontsize=20)
+                #plt.xticks(np.linspace(0,35,36,endpoint=True),xlbls)
+                plt.xticks(  rotation = 90)
+                plt.ylabel('Rainfall (mm)')
+                plt.legend(loc='Best', fontsize = 'xx-large')
+                ax.title.set_fontsize(30)
+                ax.xaxis.label.set_fontsize(20)
+                ax.yaxis.label.set_fontsize(20)
+                plt.show()
+                <br>
+                import pandas as pd
+                import numpy as np
+                from sklearn import linear_model
+                import matplotlib.pyplot as plt
+                import seaborn as sns
+                from subprocess import check_output
+                df = pd.read_csv(r'C:\Users\User_2\Downloads\chanflood.csv')
+                fig = plt.figure(figsize=(16,10))
+                ax = fig.add_subplot(222)
+                dfg = df.groupby('YEAR').sum()['ANNUAL']
+                dfg.plot('line', title='Overall Rainfall in Each Year', fontsize=20)
+                plt.ylabel('Overall Rainfall (mm)')
+                ax.title.set_fontsize(30)
+                ax.xaxis.label.set_fontsize(20)
+                ax.yaxis.label.set_fontsize(20)
+                print('Max: ' + str(dfg.max()) + ' ocurred in ' + str(dfg.loc[dfg == dfg.max()].index.values[0:]))
+                print('Min: ' + str(dfg.min()) + ' ocurred in ' + str(dfg.loc[dfg == dfg.min()].index.values[0:]))
+                print('Mean: ' + str(dfg.mean()))
+                plt.show()
+                <br>
+                import pandas as pd
+                import numpy as np
+                from sklearn import linear_model
+                import matplotlib.pyplot as plt
+                import seaborn as sns
+                from subprocess import check_output
+                df = pd.read_csv(r'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit)\chanflood.csv')
+                fig = plt.figure(figsize=(16,10))
+                ax = fig.add_subplot(111)
+                dfg = df.groupby('VOLUME').sum()['DISTANCE']
+                dfg.plot('line', title='VOLUME OF DAM VS WATER LEVEL', fontsize=20)
+                plt.ylabel('height of water level (cm)')
+                plt.xlabel('volume of water')
+                ax.title.set_fontsize(30)
+                ax.xaxis.label.set_fontsize(20)
+                ax.yaxis.label.set_fontsize(20)
+                print('Max: ' + str(dfg.max()) + ' ocurred in ' + str(dfg.loc[dfg == dfg.max()].index.values[0:]))
+                print('Min: ' + str(dfg.min()) + ' ocurred in ' + str(dfg.loc[dfg == dfg.min()].index.values[0:]))
+                print('Mean: ' + str(dfg.mean()))
+                plt.show()
+
+
+
+        </div></div>-->
+        <div class="result-container">
+            <h2 class="sub-title" style="margin:10px auto 30px auto;">Code</h2>
+            <div>
+                <img src="./img/code-1.jpg" alt="">
+
+            </div>
+            
+         
+            <div>
+                <img src="./img/code-2.jpg" alt="">
+                
+            </div>
+            <div>
+                <img src="./img/code-3.jpg" alt="">
+                
+            </div>
+            <div>
+                <img src="./img/code-4.jpg" alt="">
+                
+            </div>
+            <h2 class="sub-title" style="margin:10px auto 30px auto;">Overall Code</h2>
+            <div>
+                <img src="./img/code5.jpg" alt="">
+                    </div>
+                
+            </div>
         <div style="margin:15px auto;width:fit-content;">click here for the output... <a href="result.html">Go to result</a></div>
     </div>
     </div>
@@ -98,11 +216,9 @@
         
         </div>
         <div class=".footer-info">
-            Email id : srihari.cs19@bitsathy.ac.in / kishorekumar.it19@bitsathy.ac.in
+            NASA Space Apps CHallenge 2020
         </div>
-        <div class=".footer-info">
-        contact no : +91 8056341244 / +91 9025537359
-        </div>
+        
 
     </div>
     <script src="./source/file.js"></script>

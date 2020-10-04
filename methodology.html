@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Elite Coders | Methodology</title>
     <link rel="stylesheet" href="./source/css/style.css">
 </head>
 <body>
@@ -36,10 +36,10 @@
                         <span class="toggle-line line-2"></span>
                         <span class="toggle-line line-3"></span>
                     </div>     
-                    <div class="log-container" >
+                     <!---<div class="log-container" >
                         <button class="sign-up" onclick="show()">Sign in</button>
-                       <!--- <button class="login">Login</button>-->
-                    </div>
+                       <button class="login">Login</button>
+                    </div>-->
  
                 <div style="clear:right;"></div>
             </div>
@@ -76,32 +76,93 @@
         <div class="methodology-container">
         <h2 class="title">methodology</h2>
             <p>
-                The input image is given to system in order to discriminate the status of sky from the input cloud image. In existing system wavelets was taken into account to differentiate between the sky and cloud. Now the features are extracted from the image to represent the sky status. After that the feature extracted images of sky status is processed with cloud screening algorithm and we progress with the feature extracted image to represent the status of cloud
-
+                 we have used the Rainfall dataset in India from the Kaggle for predicting the
+                rainfall at different parts of the country at a particular time based upon the seasons. Granularity is on a
+                monthly basis and this data is taken from 36- meteorological subdivisions located in India, where the
+                amount of rainfall is being measured in Millimeters(mm).Using Machine Learning(ML) models we
+                have predicted the future rainfall of India in different places.
             </p>
 
-<h2 class="sub-title">Input Data</h2>
+<h2 class="sub-title">Machine Learning Algorithms</h2>
 <p>
-    The input data are the digital cloud images. File system are used to store the images. The dimension of image would be normal or say 400x300. The images would be loaded either from the site which in regular interval upload images or taken with minimum 10 megapixel camera with good clarity. Images taken in different atmosphere help in study better result and derive fruitful approximation of system’s efficiency.
-
+    In our project, we have used machine learning algorithms such as linear regression/logistic regression,
+    support vector machine (SVM), matplotlib for plotting the graphs.
 </p>
-<h2 class="sub-title">Sky Status</h2>
+<h2 class="sub-title">Linear/Logistic Regression</h2>
 <p>
-    The second phase is discriminate cloud and sky, i.e. sky status. In previous year research sky status is found using the wavelets and law’s texture description. But we use contourlet or pca algorithm for finding the sky status. As pca algorithm and contourlet theory provides that feature extraction by these techniques provides better result..
+    
+Linear regression is used to determine or identify the relationships between two
+columns/variables in a dataset. Logistic regression is used for analyzing a dataset that has one
+independent variable or more. The results obtained from analyzing the variables are either 0s
+or 1s/true or false.
 
 </p>
-<div><img src="./img/method.jpg" alt=""></div>
-<h2 class="sub-title">Cloud Status</h2>
+<h2 class="sub-title"> Support Vector Machine (SVM)</h2>
 <p>
-    The progressively we obtain the status of cloud. The cloud varies according to the thickness and brightness. Threshold and high density is detected. The density with the middle level is considering the sky. In mild time or moody time sky is considered as cloud. To find the mask the histogram equalization is used the value with the highest weight will be considered as sky and the others will be considered as cloud. Also the cloud mask algorithm is used here. The formula to find the cloud status is given as follows. 
-Cloud Status = Total No. of Segment – Sky Status. <br>
-The major task here is to find the type of cloud as per the cloud status each and every cloud will be having its own shape and density and the values are matched accordingly. 
-
+    
+   
+The support vector machine is used for classification between any set of groups present in the
+dataset. The objective of the SVM is to draw the best fit line which is used to differentiate
+between two different classes or groups present in the dataset.
+    
+    </p>
+    <h2 class="sub-title">Matplotlib</h2>
+    <p>
+        
+        Matplotlib is the library which can be used for creating visualization by plotting graphs
+        where we can differentiate the rainfall rate based on states when the rain occurs & further
+        differentiates the quantity of the rainfall of each city at each month
+        
+        </p>
+<div><img src="./img/method1.jpg" alt=""></div>
+<h2 class="title">Hardware Modules</h2>
+<p>
+    
+    The required hardware modules are the sensors, microcontroller and the materials for
+    power supply. The objective of these hardware components is to control and measure the
+    pressure of water. It collects the data on water level and the information is stored in the cloud
+    through the communication of WIFI and the data is being enabled to pass the information
+    through the internet.
 </p>
 
-<h2 class="title">Rainfall status and cloud information</h2>
-<p>The rainfall is estimate from the type of cloud. Cumulonimbus and nimbostratus are the rainfall clouds. So we take the color and shape and also the width and find the rainfall status the temperature is also taken into account. Cloud information gives the theoretical proof of cloud that is altitude, height, appearance and classification are given
+
+<h2 class="sub-title">Microcontroller</h2>
+    <p>
+        The microcontroller helps in processing the information which is being fetched
+from the sensors and this information is being sent to the admin through
+the medium of the cloud
+        </p>
+    <h2 class="sub-title">Sensors</h2>
+    <p>
+        
+        The sensors which help to give the information to the microcontroller from various
+        nodes located at a different place. The sensors that are required for this project are as follows:
+        <b style="color: rgb(230, 99, 12);">The ultrasonic sensor</b>-This sensor is used to measure the level of the water and the
+        average rainfall that is being occurred at a particular place. If water level strikes at a
+        particular level it emits very high frequency so these echo signals are reflected in the sensors
+        and it gives an alert message to the microcontroller and send the information to the cloud.
+        <b style="color: rgb(230, 99, 12);" >The ultrasonic sensor</b> consists of 4-pin. The 4-pins are used to measure water level, trigger,
+        ground connection & the last current.
+        <b style="color: rgb(230, 99, 12);">Pressure sensor</b> - BMP Barometric sensor is used to identify the atmospheric pressure
+        present inside the water.
+        <b style="color: rgb(230, 99, 12);">Humidity sensor</b> - DHT11 sensor works on the principle of one wire protocol which
+        identifies the climatic changes and the humidity which gives us the output in a digital format.
+        </p>
+       
+
+<h2 class="sub-title"> Power Supply</h2>
+    <p>
+        High energy of power supply is not needed, so the current we get in the AC power
+supply is being converted to the DC power supply and it can be used in the implementation.
+        </p>
+<h2 class="sub-title">Database Module</h2>
+<p>
+    The values that are being fetched by the microcontrollers from the sensors are sent to
+    the cloud via WIFI. The cloud will have the access of all the registered users. This stored
+    data is being redirected to the websites where the users can access the information about the
+    condition of flood occurring .
 </p>
+
         </div>
     </div>
 
@@ -117,10 +178,7 @@ The major task here is to find the type of cloud as per the cloud status each an
         
         </div>
         <div class=".footer-info">
-            Email id : srihari.cs19@bitsathy.ac.in / kishorekumar.it19@bitsathy.ac.in
-        </div>
-        <div class=".footer-info">
-        contact no : +91 8056341244 / +91 9025537359
+            NASA Space Apps Challenge 2020
         </div>
 
     </div>
