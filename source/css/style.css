@@ -637,6 +637,7 @@ body{
 
     .result-container div img{
         width:75%;
+        height:auto;
     }
     .result-description{
         width:75%;
